@@ -9,20 +9,3 @@ for i in range(5):
 
 print(f"The maximum value in the list is {max(numbers)}")
 
-
-# COMMAND ----------
-
-# Import necessary packages
-from pyspark.sql.functions import *
-
-
-
-
-# Load the sample data from Databricks
-df = spark.read.format('csv').option('header', 'true').load('/databricks-datasets/samples/population-vs-price/data_geo.csv')
-
-# Show the first 5 rows of the DataFrame
-df.show(5)
-
-
-
